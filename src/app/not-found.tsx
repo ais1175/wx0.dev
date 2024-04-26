@@ -1,9 +1,5 @@
 "use client";
-import { Badge } from "@/components/ui/badge";
-import Navbar from "./components/Navbar";
-import Reviews from "./components/Reviews";
 import { TypewriterEffectSmooth } from "./components/typewriter-effect";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function NotFound() {
@@ -40,12 +36,6 @@ export default function NotFound() {
                         The page you're looking for doesn't exist. Click <Link href="/" className="underline">here</Link> to get to the home page.
                     </p>
                 </div>
-
-
-
-
-
-
             </main>
         </>
     );
