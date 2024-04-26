@@ -1,13 +1,9 @@
 "use client";
 import { Badge } from "@/components/ui/badge";
 import Navbar from "../components/Navbar";
-import Reviews from "../components/Reviews";
-import { TypewriterEffectSmooth } from "../components/typewriter-effect";
-import Footer from "../components/Footer";
 import Image from "next/image";
 import {
     Card,
-    CardContent,
     CardDescription,
     CardFooter,
     CardHeader,
@@ -114,7 +110,6 @@ export default function Projects() {
 
 
             </main>
-            {/* <Footer /> */}
         </>
     );
 }
