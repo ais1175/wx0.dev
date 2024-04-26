@@ -3,7 +3,6 @@ import { Badge } from "@/components/ui/badge";
 import Navbar from "./components/Navbar";
 import Reviews from "./components/Reviews";
 import { TypewriterEffectSmooth } from "./components/typewriter-effect";
-import Footer from "./components/Footer";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -48,7 +47,6 @@ export default function NotFound() {
 
 
             </main>
-            {/* <Footer /> */}
         </>
     );
 }
