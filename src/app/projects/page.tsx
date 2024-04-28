@@ -72,44 +72,41 @@ export default function Projects() {
         <>
             <Navbar />
             <main>
-                <div className="flex flex-col items-center justify-center h-[20rem]  ">
+                <div className="flex flex-col items-center justify-center h-[20rem]">
                     <h2 className="text-white text-2xl md:text-6xl font-bold text-center">
                         My Projects
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-3 gap-5 m-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mx-5 md:mx-10">
                     {Projects.map((project, index) => (
                         <Card key={index}>
                             <CardHeader>
                                 <CardTitle>
-                                    <div className="flex gap-5 justify-left items-center justify-left">
+                                    <div className="flex gap-5 justify-left items-center">
                                         <Image src={project.image} width={100} height={100} alt={project.name} />
-                                        <h1>{project.name}</h1>
-                                        <Badge variant={"outline"}>{project.price == "free" ? "FREE" : project.price}</Badge>
+                                        <div>
+                                            <h1>{project.name}</h1>
+                                            <Badge variant={"outline"}>{project.price === "free" ? "FREE" : project.price}</Badge>
+                                        </div>
                                     </div>
                                 </CardTitle>
                                 <CardDescription className="min-w-xl max-w-xl py-5">
                                     {project.description}
                                 </CardDescription>
                             </CardHeader>
-                            <CardFooter className="flex gap-5 items-center justify-center">
+                            <CardFooter className="flex flex-wrap gap-3 items-center justify-center">
                                 {Object.entries(project.links).map(([linkName, linkUrl], linkIndex) => (
                                     <Link key={linkIndex} href={linkUrl}>
-                                        <Button variant="outline">{linkName}</Button>
+                                        <Button variant="outline" className="mb-2">{linkName}</Button>
                                     </Link>
                                 ))}
                             </CardFooter>
                         </Card>
                     ))}
                 </div>
-
-
-
-
-
-
             </main>
+
         </>
     );
 }
